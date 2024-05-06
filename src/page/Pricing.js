@@ -18,7 +18,7 @@ function Pricing() {
 			},
 			{
 				ID: 2,
-				"Product Name": "Product 2",
+				"Product Name": "Product iphone",
 				"R3 Factory": 80,
 				Noon: 100,
 				Amazon: 105,
