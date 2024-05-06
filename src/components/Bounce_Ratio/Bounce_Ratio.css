@@ -1,0 +1,10 @@
+.bounce-ratio-card {
+	width: 95%;
+	height: 95%;
+}
+
+.bounce-ratio {
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+}

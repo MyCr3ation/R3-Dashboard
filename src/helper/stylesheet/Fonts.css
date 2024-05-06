@@ -1,0 +1,59 @@
+@font-face {
+	font-family: "AvenirBlack";
+	src: url("../../assets/Avenir-Black-03.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirBlackOblique";
+	src: url("../../assets/Avenir-BlackOblique-04.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirBook";
+	src: url("../../assets/Avenir-Book-01.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirBookOblique";
+	src: url("../../assets/Avenir-BookOblique-02.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirHeavy";
+	src: url("../../assets/Avenir-Heavy-05.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirHeavyOblique";
+	src: url("../../assets/Avenir-HeavyOblique-06.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirLight";
+	src: url("../../assets/Avenir-Light-07.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirLightOblique";
+	src: url("../../assets/Avenir-LightOblique-08.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirMedium";
+	src: url("../../assets/Avenir-Medium-09.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirMediumOblique";
+	src: url("../../assets/Avenir-MediumOblique-10.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirOblique";
+	src: url("../../assets/Avenir-Oblique-11.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirRoman";
+	src: url("../../assets/Avenir-Roman-12.ttf") format("truetype");
+}

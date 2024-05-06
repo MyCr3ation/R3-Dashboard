@@ -1,0 +1,44 @@
+.dcard {
+	margin-top: 1rem;
+	width: 20rem;
+	height: 9.5rem;
+	margin-bottom: 1rem;
+	border-radius: 4px;
+	font-family: "AvenirMedium";
+}
+
+/* Cards single format */
+.cards-text {
+	border-top: 1px solid #e0dde6;
+	padding: 10px 0;
+	font-size: 15px;
+}
+
+/* Icons format */
+.icon {
+	font-size: 45px;
+	display: flex;
+	align-items: center;
+}
+
+.card-center {
+	color: #3dc32a;
+	padding-bottom: 5px;
+	font-family: "AvenirHeavy";
+}
+
+.card-center h1 {
+	font-weight: bold;
+}
+
+@media (max-width: 1390px) {
+	.dcard {
+		width: 30%;
+	}
+}
+
+@media (max-width: 600px) {
+	.dcard {
+		width: 95%;
+	}
+}

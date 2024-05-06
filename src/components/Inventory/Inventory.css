@@ -1,0 +1,12 @@
+@import url("../../helper/stylesheet/Fonts.css");
+
+.inventory {
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+}
+
+.inventory-card {
+	width: 95%;
+	height: 95%;
+}

@@ -1,0 +1,65 @@
+@import url("../../helper/stylesheet/Fonts.css");
+
+/* Styles for the sidebar container */
+.sidebar {
+	position: fixed;
+	height: 100%;
+	background-color: #3aad2b;
+	text-align: -webkit-center;
+	z-index: 2; /* Add a higher z-index value to make the sidebar appear on top */
+	width: 12rem;
+}
+
+/* Styles for all list items */
+.lists {
+	border: 1px solid white;
+	background-color: #3aad2b;
+	color: white;
+	border-radius: 33px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 80%;
+	margin-bottom: 15%;
+	font-family: "AvenirMedium";
+	font-size: 15px;
+}
+
+/* Styles for list items on hover */
+.lists:hover {
+	background-color: white;
+	color: #3aad2b !important;
+}
+
+/* Styles for the active list item */
+.lists.active {
+	background-color: white;
+	color: #3aad2b;
+}
+
+.logo {
+	border-radius: 100%; /* Makes the image circular */
+	height: 50px;
+	width: 70px;
+}
+
+.company {
+	font-family: "AvenirHeavy";
+	height: calc(90px + 7px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid white;
+	font-size: 20px;
+	color: white;
+}
+
+.second-part {
+	padding-top: 15%;
+}
+
+@media (max-width: 770px) {
+	.sidebar {
+		display: none;
+	}
+}

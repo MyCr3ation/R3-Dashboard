@@ -1,0 +1,28 @@
+.tablehead {
+	display: flex;
+	justify-content: center;
+	padding-top: 2%;
+	font-family: "AvenirHeavy";
+}
+
+.card-body-table tr th {
+	font-family: "AvenirHeavy";
+}
+
+.card-body-table tr td {
+	font-family: "AvenirRoman";
+}
+
+.card-body-table tr th:nth-child(n + 2),
+.card-body-table tr td:nth-child(n + 2) {
+	text-align: center;
+}
+
+.card-body-table {
+	width: 100%;
+	height: 100%;
+}
+
+.card-table {
+	border-radius: 18px;
+}

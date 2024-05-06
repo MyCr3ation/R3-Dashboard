@@ -1,0 +1,88 @@
+/* Navbar.css */
+@import url("../../helper/stylesheet/Fonts.css");
+
+.navbar {
+	border-bottom: 1px solid #3aad2b;
+	font-family: "AvenirMedium";
+	padding-left: 13rem;
+	z-index: 1;
+	height: 97px;
+}
+
+.full-nav {
+	height: 4rem;
+	margin-bottom: 1rem;
+}
+
+.profile-img,
+.profile-img-all {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
+
+.buttons {
+	gap: 1rem;
+}
+
+button {
+	border: 1px solid #3aad2b;
+	border-radius: 8px;
+	font-size: 16px;
+	color: #3aad2b;
+	background-color: white;
+	padding: 0.5rem 1rem;
+}
+
+button:hover,
+button.active {
+	color: white;
+	background-color: #3aad2b;
+	border-color: white;
+}
+
+.dropdown-menu {
+	background-color: #f8f9fa;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 0.5rem 0;
+}
+
+.dropdown-item-nav-rightside {
+	color: #3aad2b;
+	font-size: 16px;
+	padding: 0.5rem 1rem;
+}
+
+.dropdown-item-nav-rightside :hover,
+.dropdown-item-nav-rightside :focus {
+	background-color: #3aad2b;
+	color: white;
+}
+
+@media (max-width: 770px) {
+	.navbar-brand {
+		margin-bottom: 0.5rem;
+	}
+	.profile-img {
+		display: none; /* Hide the profile picture */
+	}
+	.navbar {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+}
+
+.dropdown-rightside .btn {
+	background-color: #3aad2b;
+	border: #3aad2b;
+	font-size: 16px;
+	padding: 0.5rem 1rem;
+}
+
+.dropdown-leftside .btn {
+	background-color: transparent !important;
+	border: none;
+	color: black;
+}

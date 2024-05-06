@@ -1,0 +1,77 @@
+@import url("../../helper/stylesheet/Fonts.css");
+
+.grid {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.bargraph-card {
+	margin: 10px;
+	width: 90%;
+}
+
+.bargraph {
+	display: flex;
+	justify-content: center;
+}
+
+.card-sales-category-table {
+	width: 90%;
+}
+
+.sales-category-table tr td:nth-child(n + 2),
+.sales-category-table tr th:nth-child(n + 2) {
+	text-align: center;
+}
+
+.bargraph-card-header,
+.data-cardheader {
+	background-color: white;
+}
+
+.dropdown-bargraph .btn {
+	background-color: #3dc32a;
+	border-color: #3dc32a;
+	font-family: "AvenirRoman";
+}
+
+.leftside-cardtitle {
+	font-family: "AvenirMedium";
+	display: flex;
+	gap: 10%;
+	font-size: 15px;
+	align-items: center;
+	color: #3dc32a;
+}
+
+.center-cardtitle {
+	font-family: "AvenirHeavy" !important;
+	color: #7a7a7a;
+	display: flex;
+	align-items: center;
+}
+
+.rightside-cardtitle {
+	font-family: "AvenirMedium";
+	display: flex;
+	gap: 10%;
+	font-size: 15px;
+	align-items: center;
+	color: #3dc32a;
+	padding-right: 1.5%;
+}
+
+.sales-category-table tr th:nth-child(n) {
+	color: #393939;
+}
+
+.sales-category-table tr td:nth-child(n) {
+	color: #7a7a7a;
+}
+
+@media (max-width: 600px) {
+	.today-cards {
+		display: flex !important;
+		flex-direction: column;
+	}
+}
