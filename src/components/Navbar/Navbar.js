@@ -5,7 +5,7 @@ import "./Navbar.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import logo from "../../assets/R3Logo.jpeg";
+import logo from "../../assets/R3FactoryLogo.png";
 
 function NavBar() {
 	const location = useLocation();

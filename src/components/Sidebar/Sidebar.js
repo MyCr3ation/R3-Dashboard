@@ -5,7 +5,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { GiSpeedometer } from "react-icons/gi";
 import { IoMdPricetags } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/R3Logo.jpeg";
+import logo from "../../assets/R3FactoryLogo.png";
 
 function Sidebar() {
 	const navigate = useNavigate(); // Hook for navigation
