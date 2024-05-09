@@ -9,7 +9,7 @@ function CardLineChart({ tablehead, targetPerformance, options }) {
 			<Card.Title className="tablehead">
 				{tablehead}'s Weekly Performance
 			</Card.Title>
-			<Card.Body>
+			<Card.Body className="h-100 w-100">
 				<Line
 					data={targetPerformance}
 					className="h-100 w-100"

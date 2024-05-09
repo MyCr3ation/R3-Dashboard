@@ -2,178 +2,141 @@ import "../helper/stylesheet/Individual_View.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import React, { useMemo } from "react";
-
-function IncentiveDetailsTable({ incentiveDetails }) {
-	return (
-		<div className="table-responsive">
-			<table className="table incentive-details-table">
-				<thead>
-					<tr>
-						<th>Channel</th>
-						<th>Company Share</th>
-						<th>Profit Earned</th>
-					</tr>
-				</thead>
-				<tbody>
-					{incentiveDetails.map((detail, index) => (
-						<tr key={index}>
-							<td className={detail.color ? "td-color" : ""}>{detail.name}</td>
-							<td className={detail.color ? "td-color" : ""}>{detail.share}</td>
-							<td className={detail.color ? "td-color" : ""}>
-								{detail.profit}
-							</td>
-						</tr>
-					))}
-				</tbody>
-			</table>
-		</div>
-	);
-}
-
-function EmployeeLeadsTable({ employeeLeads, thead }) {
-	return (
-		<div className="table-responsive">
-			<table className="table table-bordered employee-leads-table">
-				<thead>
-					<tr>
-						{thead.map((header, index) => (
-							<th key={index}>{header}</th>
-						))}
-					</tr>
-				</thead>
-				<tbody className="employee-leads-tbody">
-					{employeeLeads.map((detail, index) => (
-						<tr key={index}>
-							<td>{detail.id}</td>
-							<td>{detail.service}</td>
-							<td>{detail.channel}</td>
-							<td>{detail.tasks}</td>
-							<td>{detail.assign_date}</td>
-							<td>{detail.follow_date}</td>
-							<td>{detail.status}</td>
-						</tr>
-					))}
-				</tbody>
-			</table>
-		</div>
-	);
-}
+import CardTable from "../components/CardTable/CardTable";
 
 function Individual_View() {
-	const incentiveDetails = [
-		{ name: "Repair Team", share: 2500, profit: 25 },
-		{ name: "Repair Incentive", share: 800, profit: 30, color: true },
-		{ name: "B2B Incentive", share: 600, profit: 17 },
-		{ name: "Sales Incentive", share: 2600, profit: 26, color: true },
-		{ name: "Sales Team", share: 1600, profit: 15 },
-		{ name: "Team Pool", share: 4500, profit: 40, color: true },
-	];
+	const incentiveDetails = {
+		title: "Employee Name",
+		labels: ["Channel", "Company Share", "Profit Earned"],
+		data: [
+			{ Channel: "Repair Team", "Company Share": 2500, "Profit Earned": 25 },
+			{
+				Channel: "Repair Incentive",
+				"Company Share": 800,
+				"Profit Earned": 30,
+			},
+			{ Channel: "B2B Incentive", "Company Share": 600, "Profit Earned": 17 },
+			{
+				Channel: "Sales Incentive",
+				"Company Share": 2600,
+				"Profit Earned": 26,
+			},
+			{ Channel: "Sales Team", "Company Share": 1600, "Profit Earned": 15 },
+			{ Channel: "Team Pool", "Company Share": 4500, "Profit Earned": 40 },
+		],
+	};
 
-	const thead = [
-		"Lead ID",
-		"Service",
-		"Channel",
-		"Tasks",
-		"Assign Date",
-		"Follow-up Date",
-		"Status",
-	];
+	const totalProfit = useMemo(() => {
+		const profit = incentiveDetails.data.reduce(
+			(acc, curr) => acc + curr["Profit Earned"],
+			0
+		);
+		return profit;
+	}, [incentiveDetails]);
 
-	const totalProfit = useMemo(
-		() => incentiveDetails.reduce((acc, curr) => acc + curr.profit, 0),
-		[incentiveDetails]
+	const cardFooter = (
+		<Card.Footer className="d-flex justify-content-between incentive-details-cardfooter">
+			<p className="imp">Total Amount</p>
+			<div className="d-flex justify-content-between align-items-baseline total-amount">
+				<p className="imp">{totalProfit}</p>
+				<p>AED</p>
+			</div>
+		</Card.Footer>
 	);
 
-	const employeeName = "EMPLOYEE NAME";
-
-	const employeeLeads = [
-		{
-			id: 1,
-			service: "Sales",
-			channel: "Whatsapp",
-			tasks: 3,
-			assign_date: "2023 - 10 - 1",
-			follow_date: "2023 - 10 - 2",
-			status: "Completed",
-		},
-		{
-			id: 2,
-			service: "Repair",
-			channel: "Facebook",
-			tasks: 2,
-			assign_date: "2023 - 10 - 1",
-			follow_date: "2023 - 10 - 5",
-			status: "Pending",
-		},
-		{
-			id: "",
-			service: "",
-			channel: "",
-			tasks: "",
-			assign_date: "",
-			follow_date: "",
-			status: "",
-		},
-		{
-			id: "",
-			service: "",
-			channel: "",
-			tasks: "",
-			assign_date: "",
-			follow_date: "",
-			status: "",
-		},
-		{
-			id: "",
-			service: "",
-			channel: "",
-			tasks: "",
-			assign_date: "",
-			follow_date: "",
-			status: "",
-		},
-		{
-			id: "",
-			service: "",
-			channel: "",
-			tasks: "",
-			assign_date: "",
-			follow_date: "",
-			status: "",
-		},
-	];
-
-	const currency = "AED";
-
-	const cardtitle = "LEADS";
+	const employeeLeads = {
+		title: "LEADS",
+		labels: [
+			"Lead ID",
+			"Service",
+			"Channel",
+			"Tasks",
+			"Assign Date",
+			"Follow-up Date",
+			"Status",
+		],
+		data: [
+			{
+				"Lead ID": 1,
+				Service: "Sales",
+				Channel: "Whatsapp",
+				Tasks: 3,
+				"Assign Date": "2023 - 10 - 1",
+				"Follow-up Date": "2023 - 10 - 2",
+				Status: "Completed",
+			},
+			{
+				"Lead ID": 2,
+				Service: "Repair",
+				Channel: "Facebook",
+				Tasks: 2,
+				"Assign Date": "2023 - 10 - 1",
+				"Follow-up Date": "2023 - 10 - 5",
+				Status: "Pending",
+			},
+			{
+				"Lead ID": "",
+				Service: "",
+				Channel: "",
+				Tasks: "",
+				"Assign Date": "",
+				"Follow-up Date": "",
+				Status: "",
+			},
+			{
+				"Lead ID": "",
+				Service: "",
+				Channel: "",
+				Tasks: "",
+				"Assign Date": "",
+				"Follow-up Date": "",
+				Status: "",
+			},
+			{
+				"Lead ID": "",
+				Service: "",
+				Channel: "",
+				Tasks: "",
+				"Assign Date": "",
+				"Follow-up Date": "",
+				Status: "",
+			},
+			{
+				"Lead ID": "",
+				Service: "",
+				Channel: "",
+				Tasks: "",
+				"Assign Date": "",
+				"Follow-up Date": "",
+				Status: "",
+			},
+		],
+	};
 
 	return (
 		<div>
 			<h2>INCENTIVE DETAILS</h2>
 			<div className="incentive-details">
-				<Card className="incentive-details-card">
-					<Card.Title className="individual-view-card-title">
-						{employeeName}
-					</Card.Title>
-					<IncentiveDetailsTable incentiveDetails={incentiveDetails} />
-					<Card.Footer className="d-flex justify-content-between incentive-details-cardfooter">
-						<p className="imp">Total Amount</p>
-						<div className="d-flex justify-content-between align-items-baseline total-amount">
-							<p className="imp">{totalProfit}</p>
-							<p>{currency}</p>
-						</div>
-					</Card.Footer>
-				</Card>
+				<div className="incentive-details-card">
+					<CardTable
+						Data={incentiveDetails.data}
+						labels={incentiveDetails.labels}
+						title={incentiveDetails.title}
+						showfooter={true}
+						footerData={cardFooter}
+					/>
+				</div>
 			</div>
 
 			<h2>EMPLOYEE LEADS</h2>
 			<div className="employee-leads">
-				<Card className="employee-leads-card">
-					<Card.Title className="individual-view-card-title">
-						{cardtitle}
-					</Card.Title>
-					<EmployeeLeadsTable employeeLeads={employeeLeads} thead={thead} />
-				</Card>
+				<div className="employee-leads-card">
+					<CardTable
+						Data={employeeLeads.data}
+						labels={employeeLeads.labels}
+						title={employeeLeads.title}
+					/>
+				</div>
 			</div>
 		</div>
 	);

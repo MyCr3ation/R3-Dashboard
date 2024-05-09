@@ -19,7 +19,10 @@ function Sidebar() {
 	return (
 		<div className="sidebar">
 			<div className="company">
-				<img src={logo} className="logo" alt="Profile" />
+				<div className="logo-div">
+					<img src={logo} className="logo" alt="Profile" />
+				</div>
+
 				<span className="navbar-brand mb-0 h1 m-1 company-name">
 					R3 Factory
 				</span>

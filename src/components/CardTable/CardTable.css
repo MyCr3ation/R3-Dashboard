@@ -26,3 +26,18 @@
 .card-table {
 	border-radius: 18px;
 }
+
+.nav-pagination {
+	position: absolute;
+	bottom: 0;
+	right: 1%;
+}
+
+.pagination {
+	--bs-pagination-border-radius: 2rem !important;
+}
+
+.cardbody {
+	position: relative;
+	height: 330px;
+}

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import "../helper/stylesheet/Performance.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CardTable from "../components/CardTable/CardTable";
@@ -7,7 +8,7 @@ function CombineCards({ tablehead, Data, labels, targetPerformance, options }) {
 	return (
 		<div className="employee">
 			<div className="combinecard-table">
-				<CardTable tablehead={tablehead} Data={Data} labels={labels} />
+				<CardTable title={tablehead} Data={Data} labels={labels} />
 			</div>
 			<div className="combinecard-line-chart">
 				<CardLineChart
@@ -19,7 +20,11 @@ function CombineCards({ tablehead, Data, labels, targetPerformance, options }) {
 		</div>
 	);
 }
+
 function Performance() {
+	const [selectedName, setSelectedName] = useState("");
+	const [filteredData, setFilteredData] = useState(null);
+
 	const label = [
 		"Sunday",
 		"Monday",
@@ -190,19 +195,72 @@ function Performance() {
 		},
 	};
 
+	const names = Object.keys(data1);
+
+	useEffect(() => {
+		if (selectedName && data1[selectedName]) {
+			setFilteredData(data1[selectedName]);
+		} else {
+			setFilteredData(null);
+		}
+	}, [selectedName]);
+
 	return (
-		<div className="performance-page">
-			{Object.entries(data1).map(([key, value]) => (
-				<CombineCards
-					className="cardtable"
-					tablehead={value.name}
-					Data={value.task}
-					labels={labels}
-					targetPerformance={value.data}
-					options={options}
-				/>
-			))}
-		</div>
+		<>
+			<div className="form-group selection">
+				<div className="input-group">
+					<input
+						type="text"
+						className="form-control"
+						placeholder="Select Name"
+						list="list-names"
+						id="input-datalist"
+						value={selectedName}
+						onChange={(e) => setSelectedName(e.target.value)}
+					/>
+					<div className="input-group-append">
+						<span
+							className="input-group-text"
+							onClick={() => setSelectedName("")}
+						>
+							X
+						</span>
+					</div>
+
+					<datalist id="list-names">
+						{names.map((name) => (
+							<option key={name} value={name}>
+								{name}
+							</option>
+						))}
+					</datalist>
+				</div>
+			</div>
+			<div className="performance-page">
+				{filteredData ? (
+					<CombineCards
+						className="cardtable"
+						tablehead={filteredData.name}
+						Data={filteredData.task}
+						labels={labels}
+						targetPerformance={filteredData.data}
+						options={options}
+					/>
+				) : (
+					names.map((name) => (
+						<CombineCards
+							key={name}
+							className="cardtable"
+							tablehead={data1[name].name}
+							Data={data1[name].task}
+							labels={labels}
+							targetPerformance={data1[name].data}
+							options={options}
+						/>
+					))
+				)}
+			</div>
+		</>
 	);
 }
 
