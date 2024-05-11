@@ -184,7 +184,7 @@ function Sales() {
 							<tbody>
 								{salesCategory.map((detail, index) => (
 									<tr key={index}>
-										{/* Add it into css */}
+										{/* Add it into css still pending*/}
 										<td className="text-truncate" style={{ maxWidth: "40px" }}>
 											{detail.channel}
 										</td>
