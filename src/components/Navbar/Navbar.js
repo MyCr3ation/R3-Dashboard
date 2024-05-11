@@ -66,8 +66,10 @@ function NavBar() {
 					</>
 				) : (
 					<>
-						<span className="navbar-brand mb-0 h1">{currentPath.label}</span>
-						<div className="navbar-nav mr-auto d-flex flex-row buttons">
+						<span className="navbar-brand col-md-4 mb-0 h1">
+							{currentPath.label}
+						</span>
+						<div className="navbar-nav col-md-8 d-flex flex-row buttons">
 							{currentPath.path === "dashboard" && (
 								<>
 									<button
@@ -90,9 +92,6 @@ function NavBar() {
 									</button>
 								</>
 							)}
-						</div>
-						<div>
-							<img src={profile} className="profile-img" alt="Profile" />
 						</div>
 					</>
 				)}

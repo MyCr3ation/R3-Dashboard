@@ -12,7 +12,7 @@ function CardLineChart({ tablehead, targetPerformance, options }) {
 			<Card.Body className="h-100 w-100">
 				<Line
 					data={targetPerformance}
-					className="h-100 w-100"
+					className="h-100 w-100 d-inline-grid"
 					options={options}
 				/>
 			</Card.Body>
