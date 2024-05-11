@@ -57,7 +57,12 @@ function NavBar() {
 								</Dropdown.Item>
 							))}
 						</DropdownButton>
-						<img src={logo} alt="Logo" />
+						<img
+							className="logo"
+							src={logo}
+							alt="Logo"
+							onClick={() => navigate("/dashboard?cat=sales")}
+						/>
 					</>
 				) : (
 					<>

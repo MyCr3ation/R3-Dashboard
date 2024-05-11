@@ -143,11 +143,7 @@ function Sales() {
 						</Card.Title>
 					</Card.Header>
 					<Card.Body>
-						<Bar
-							data={data}
-							className="h-100 w-100 card-body-bar"
-							options={options}
-						/>
+						<Bar data={data} className="h-100 w-100" options={options} />
 					</Card.Body>
 				</Card>
 			</div>
@@ -165,9 +161,9 @@ function Sales() {
 							</div>
 							<div className="center-cardtitle">Sales Category</div>
 							<div className="rightside-cardtitle">
-								<div>BTD</div>
-								<div>YTD</div>
-								<div>MTD</div>
+								<div>All</div>
+								<div>B2B</div>
+								<div>B2C</div>
 							</div>
 						</Card.Title>
 					</Card.Header>
