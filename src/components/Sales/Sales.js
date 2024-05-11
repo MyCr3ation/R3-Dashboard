@@ -78,12 +78,12 @@ function Sales() {
 	};
 
 	const salesCategory = [
-		{ channel: "Showroom", owner: "Jabir", sales: 3000, gp: 2200, np: 1600 },
-		{ channel: "E-Commerce", owner: "Ivy", sales: 2300, gp: 1800, np: 1400 },
-		{ channel: "Wholesale", owner: "Zeeshan", sales: 2700, gp: 1500, np: 1200 },
+		{ channel: "Showroom", sales: 3000, gp: 2200, np: 1600 },
+		{ channel: "E-Commerce", sales: 2300, gp: 1800, np: 1400 },
+		{ channel: "Wholesale", sales: 2700, gp: 1500, np: 1200 },
 		{
 			channel: "Repair Service",
-			owner: "Rajesh",
+
 			sales: 1400,
 			gp: 1700,
 			np: 800,
@@ -143,7 +143,11 @@ function Sales() {
 						</Card.Title>
 					</Card.Header>
 					<Card.Body>
-						<Bar data={data} className="h-100 w-100" options={options} />
+						<Bar
+							data={data}
+							className="h-100 w-100 d-inline-grid"
+							options={options}
+						/>
 					</Card.Body>
 				</Card>
 			</div>
@@ -161,18 +165,17 @@ function Sales() {
 							</div>
 							<div className="center-cardtitle">Sales Category</div>
 							<div className="rightside-cardtitle">
-								<div>BTD</div>
-								<div>YTD</div>
-								<div>MTD</div>
+								<div>All</div>
+								<div>B2B</div>
+								<div>B2C</div>
 							</div>
 						</Card.Title>
 					</Card.Header>
 					<Card.Body>
-						<table className="table sales-category-table">
+						<table className="table table-responsive sales-category-table">
 							<thead>
 								<tr>
 									<th>Sales Channel</th>
-									<th>Owner</th>
 									<th>Sales</th>
 									<th>GP</th>
 									<th>NP</th>
@@ -181,8 +184,10 @@ function Sales() {
 							<tbody>
 								{salesCategory.map((detail, index) => (
 									<tr key={index}>
-										<td>{detail.channel}</td>
-										<td>{detail.owner}</td>
+										{/* Add it into css */}
+										<td className="text-truncate" style={{ maxWidth: "40px" }}>
+											{detail.channel}
+										</td>
 										<td>{detail.sales}</td>
 										<td>{detail.gp}</td>
 										<td>{detail.np}</td>

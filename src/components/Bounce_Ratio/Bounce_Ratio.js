@@ -88,7 +88,11 @@ function Bounce_Ratio() {
 					</Card.Title>
 				</Card.Header>
 				<Card.Body>
-					<Bar className="h-100 w-100" data={data} options={options} />
+					<Bar
+						data={data}
+						className="h-100 w-100 d-inline-grid"
+						options={options}
+					/>
 				</Card.Body>
 			</Card>
 		</div>

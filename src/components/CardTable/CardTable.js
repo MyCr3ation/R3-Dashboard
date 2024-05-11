@@ -1,44 +1,54 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import "./CardTable.css";
+import { useState } from "react";
 
 function CardTable({
 	Data,
 	labels,
-	tablehead,
+	title,
 	showstyle,
 	style,
 	showfooter,
 	footerData,
+	minTab,
 }) {
+	const [currentPage, setCurrentPage] = useState(1);
+	const recordsPerPage = 5;
+	const lastIndex = currentPage * recordsPerPage;
+	const firstIndex = lastIndex - recordsPerPage;
+	const records = Data.slice(firstIndex, lastIndex);
+	const npage = Math.ceil(Data.length / recordsPerPage);
+	const numbers = [...Array(npage + 1).keys()].slice(1);
+
 	return (
 		<Card className="card-table shadow">
-			<Card.Title className="tablehead"> {tablehead}</Card.Title>
-			<Card.Body>
+			<Card.Title className="tablehead">{title}</Card.Title>
+			<Card.Body className="cardbody">
 				<div className="table-responsive">
 					<table className="table card-body-table table-striped">
 						<tbody>
 							<tr>
 								{labels.map((label, index) => (
-									<th key={index}>{label}</th>
+									<th key={index.id}>{label}</th>
 								))}
 							</tr>
 							{showstyle ? (
 								<>
-									{Data.map((row, index) => (
-										<tr key={index} className={style[index]}>
+									{records.map((row, index) => (
+										<tr key={index.id} className={row[style]}>
 											{labels.map((label, labelIndex) => (
-												<td key={labelIndex}>{row[label]}</td>
+												<td key={labelIndex.id}>{row[label]}</td>
 											))}
 										</tr>
 									))}
 								</>
 							) : (
 								<>
-									{Data.map((row, index) => (
-										<tr key={index}>
+									{records.map((row, index) => (
+										<tr key={index.id}>
 											{labels.map((label, labelIndex) => (
-												<td key={labelIndex}>{row[label]}</td>
+												<td key={labelIndex.id}>{row[label]}</td>
 											))}
 										</tr>
 									))}
@@ -47,14 +57,55 @@ function CardTable({
 						</tbody>
 					</table>
 				</div>
+				<nav className="nav-pagination">
+					<ul className="pagination">
+						<li className="page-item">
+							<a
+								className={`page-link ${currentPage === 1 ? "disabled" : ""}`}
+								onClick={prePage}
+							>
+								&laquo;
+							</a>
+						</li>
+						{numbers.map((n, i) => (
+							<li className={`page-item ${currentPage === n ? "active" : ""}`}>
+								<a className="page-link" onClick={() => changeCPage(n)}>
+									{n}
+								</a>
+							</li>
+						))}
+						<li className="page-item">
+							<a
+								className={`page-link ${
+									currentPage === npage ? "disabled" : ""
+								}`}
+								onClick={nextPage}
+							>
+								&raquo;
+							</a>
+						</li>
+					</ul>
+				</nav>
 			</Card.Body>
-			{showfooter ? (
-				<Card.Footer className="tablefooter">
-					<>{footerData}</>
-				</Card.Footer>
-			) : null}
+			{showfooter ? <>{footerData}</> : null}
 		</Card>
 	);
+
+	function prePage() {
+		if (currentPage !== 1) {
+			setCurrentPage(currentPage - 1);
+		}
+	}
+
+	function changeCPage(id) {
+		setCurrentPage(id);
+	}
+
+	function nextPage() {
+		if (currentPage !== npage) {
+			setCurrentPage(currentPage + 1);
+		}
+	}
 }
 
 export default CardTable;

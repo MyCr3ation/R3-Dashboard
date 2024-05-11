@@ -75,3 +75,10 @@
 		flex-direction: column;
 	}
 }
+
+@media (max-width: 540px) {
+	.card-title {
+		flex-direction: column !important;
+		gap: 1rem;
+	}
+}

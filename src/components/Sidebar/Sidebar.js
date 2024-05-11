@@ -5,7 +5,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { GiSpeedometer } from "react-icons/gi";
 import { IoMdPricetags } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/R3Logo.jpeg";
+import logo from "../../assets/R3FactoryLogo.png";
 
 function Sidebar() {
 	const navigate = useNavigate(); // Hook for navigation
@@ -19,7 +19,10 @@ function Sidebar() {
 	return (
 		<div className="sidebar">
 			<div className="company">
-				<img src={logo} className="logo" alt="Profile" />
+				<div className="logo-div">
+					<img src={logo} className="logo-sidebar" />
+				</div>
+
 				<span className="navbar-brand mb-0 h1 m-1 company-name">
 					R3 Factory
 				</span>

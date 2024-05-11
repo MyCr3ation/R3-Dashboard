@@ -1,8 +1,6 @@
 import "../helper/stylesheet/Dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Card from "react-bootstrap/Card";
 import { useLocation } from "react-router-dom";
-import { Bar } from "react-chartjs-2";
 import Sales from "../components/Sales/Sales";
 import Inventory from "../components/Inventory/Inventory";
 import Bounce_Ratio from "../components/Bounce_Ratio/Bounce_Ratio";

@@ -74,7 +74,11 @@ function Inventory() {
 					</Card.Title>
 				</Card.Header>
 				<Card.Body>
-					<Bar className="h-100 w-100" data={data} options={options} />
+					<Bar
+						className="h-100 w-100 d-inline-grid"
+						data={data}
+						options={options}
+					/>
 				</Card.Body>
 			</Card>
 		</div>

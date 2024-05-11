@@ -1,60 +1,18 @@
-.td-color {
-	background-color: #f2f2f2 !important; /* Light gray background color */
-}
-
 .incentive-details-card {
-	padding: 2%;
-	width: 90%;
-	height: 90%;
-}
-
-.incentive-details-table tr td:nth-child(n + 2),
-.incentive-details-table tr th:nth-child(n + 2) {
-	text-align: center;
-}
-
-.incentive-details-table tr th:nth-child(n) {
-	background-color: #f2f2f2;
-	font-family: "AvenirHeavy";
-}
-
-.incentive-details-table tr td:nth-child(n) {
-	font-family: "AvenirRoman";
-}
-
-.incentive-details {
-	display: flex;
-	justify-content: center;
 	margin-top: 2%;
-	margin-bottom: 2%;
-}
-
-.employee-leads-table tr td:nth-child(n),
-.employee-leads-table tr th:nth-child(n) {
-	text-align: center;
-}
-
-.table-bordered {
-	border: 1px solid #000000;
-	border-right: none;
+	margin-bottom: 3%;
+	width: 100%;
 }
 
 .employee-leads-card {
-	height: 95%;
-	width: 95%;
-	padding: 2%;
+	margin-top: 2%;
+	width: 100%;
 }
 
-.employee-leads {
+.employee-leads,
+.incentive-details {
 	display: flex;
 	justify-content: center;
-	padding: 2%;
-}
-
-.individual-view-card-title {
-	font-family: "AvenirHeavy";
-	color: #838383;
-	font-size: 30px;
 }
 
 .incentive-details-cardfooter {
@@ -75,10 +33,6 @@ h2 {
 	color: #838383;
 }
 
-.employee-leads-table tr th:nth-child(n) {
-	font-family: "AvenirHeavy";
-}
-
-.employee-leads-table tr td:nth-child(n) {
-	font-family: "AvenirRoman";
+.employee-leads {
+	margin-bottom: 5%;
 }

@@ -86,3 +86,7 @@ button.active {
 	border: none;
 	color: black;
 }
+
+.logo {
+	height: 40px;
+}
