@@ -143,7 +143,11 @@ function Sales() {
 						</Card.Title>
 					</Card.Header>
 					<Card.Body>
-						<Bar data={data} className="h-100 w-100" options={options} />
+						<Bar
+							data={data}
+							className="h-100 w-100 d-inline-grid"
+							options={options}
+						/>
 					</Card.Body>
 				</Card>
 			</div>
