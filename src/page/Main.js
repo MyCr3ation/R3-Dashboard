@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Navbar from "../components/Navbar/Navbar";
 import Dashboard from "./Dashboard";
-import Individual_View from "./Individual_View";
+import AnalysisView from "./Analysis_View";
 import Performance from "./Performance";
 import Pricing from "./Pricing";
 
@@ -47,7 +47,7 @@ function App() {
 				<ScrollToTop />
 				<Routes>
 					<Route path="/dashboard" element={<Dashboard />} />
-					<Route path="/individual_view" element={<Individual_View />} />
+					<Route path="/analysis_view" element={<AnalysisView />} />
 					<Route path="/performance" element={<Performance />} />
 					<Route path="/pricing" element={<Pricing />} />
 					<Route

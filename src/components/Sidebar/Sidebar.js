@@ -37,11 +37,11 @@ function Sidebar() {
 				</button>
 				{/* Individual View link */}
 				<button
-					className={`${isActive("/individual_view")} lists`}
-					onClick={() => navigate("/individual_view")}
+					className={`${isActive("/analysis_view")} lists`}
+					onClick={() => navigate("/analysis_view")}
 				>
 					<IoEyeOutline />
-					Individual View
+					Analysis View
 				</button>
 				{/* Performance link */}
 				<button

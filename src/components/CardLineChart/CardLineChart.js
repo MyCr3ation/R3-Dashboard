@@ -6,9 +6,7 @@ import { Line } from "react-chartjs-2";
 function CardLineChart({ tablehead, targetPerformance, options }) {
 	return (
 		<Card className="card-line-chart shadow-sm">
-			<Card.Title className="tablehead">
-				{tablehead}'s Weekly Performance
-			</Card.Title>
+			<Card.Title className="tablehead">{tablehead}</Card.Title>
 			<Card.Body className="h-100 w-100">
 				<Line
 					data={targetPerformance}

@@ -98,9 +98,20 @@ function Sales() {
 					name={"Sales"}
 					amount={7200}
 					icon={<FaCoins style={{ fontSize: "35px" }} />}
+					cardhead={"AED"}
 				/>
-				<DisplayCard name={"GP"} amount={2500} icon={<AiOutlineStock />} />
-				<DisplayCard name={"NP"} amount={2000} icon={<FaHandHoldingUsd />} />
+				<DisplayCard
+					name={"GP"}
+					amount={2500}
+					icon={<AiOutlineStock />}
+					cardhead={"AED"}
+				/>
+				<DisplayCard
+					name={"NP"}
+					amount={2000}
+					icon={<FaHandHoldingUsd />}
+					cardhead={"AED"}
+				/>
 			</div>
 			<h1>Yesterday</h1>
 			<div className="d-flex justify-content-around today-cards">
@@ -108,9 +119,20 @@ function Sales() {
 					name={"Sales"}
 					amount={7200}
 					icon={<FaCoins style={{ fontSize: "35px" }} />}
+					cardhead={"AED"}
 				/>
-				<DisplayCard name={"GP"} amount={2500} icon={<AiOutlineStock />} />
-				<DisplayCard name={"NP"} amount={2000} icon={<FaHandHoldingUsd />} />
+				<DisplayCard
+					name={"GP"}
+					amount={2500}
+					icon={<AiOutlineStock />}
+					cardhead={"AED"}
+				/>
+				<DisplayCard
+					name={"NP"}
+					amount={2000}
+					icon={<FaHandHoldingUsd />}
+					cardhead={"AED"}
+				/>
 			</div>
 			<div className="bargraph">
 				<Card className="bargraph-card shadow-sm">

@@ -62,6 +62,7 @@ function CardTable({
 						<li className="page-item">
 							<a
 								className={`page-link ${currentPage === 1 ? "disabled" : ""}`}
+								href="#"
 								onClick={prePage}
 							>
 								&laquo;

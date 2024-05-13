@@ -20,7 +20,7 @@ function NavBar() {
 
 	const navItems = [
 		{ path: "dashboard", label: "Dashboard", query: "?cat=sales" },
-		{ path: "individual_view", label: "Individual View" },
+		{ path: "analysis_view", label: "Analysis View" },
 		{ path: "performance", label: "Performance" },
 		{ path: "pricing", label: "Pricing" },
 	];

@@ -73,7 +73,9 @@ function Bounce_Ratio() {
 							<div>YTD</div>
 							<div>MTD</div>
 						</div>
-						<div className="center-cardtitle">BOUNCE RATIO</div>
+						<div className="center-cardtitle">
+							BOUNCE RATIO (RETURNED PRODUCTS)
+						</div>
 						<div>
 							<DropdownButton
 								id="dropdown-basic-button"
