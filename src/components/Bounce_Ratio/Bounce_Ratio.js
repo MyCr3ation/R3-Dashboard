@@ -66,26 +66,10 @@ function Bounce_Ratio() {
 				<Card.Header className="bargraph-card-header">
 					<Card.Title
 						as="h4"
-						className="d-flex justify-content-between align-item-center"
+						className="d-flex justify-content-center align-item-center"
 					>
-						<div className="leftside-cardtitle">
-							<div>BTD</div>
-							<div>YTD</div>
-							<div>MTD</div>
-						</div>
 						<div className="center-cardtitle">
 							BOUNCE RATIO (RETURNED PRODUCTS)
-						</div>
-						<div>
-							<DropdownButton
-								id="dropdown-basic-button"
-								title="Category"
-								className="dropdown-bargraph"
-							>
-								<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-								<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-								<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-							</DropdownButton>
 						</div>
 					</Card.Title>
 				</Card.Header>
