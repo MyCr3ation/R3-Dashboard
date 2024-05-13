@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import profile from "../../assets/person.jpeg";
 import { MdOutlineMenu } from "react-icons/md";
 import "./Navbar.css";
 import { useLocation, useNavigate } from "react-router-dom";
