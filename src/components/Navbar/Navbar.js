@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import profile from "../../assets/person.jpeg";
 import { MdOutlineMenu } from "react-icons/md";
 import "./Navbar.css";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -21,7 +20,7 @@ function NavBar() {
 
 	const navItems = [
 		{ path: "dashboard", label: "Dashboard", query: "?cat=sales" },
-		{ path: "individual_view", label: "Individual View" },
+		{ path: "analysis_view", label: "Analysis View" },
 		{ path: "performance", label: "Performance" },
 		{ path: "pricing", label: "Pricing" },
 	];

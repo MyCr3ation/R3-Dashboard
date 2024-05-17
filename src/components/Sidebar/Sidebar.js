@@ -20,7 +20,7 @@ function Sidebar() {
 		<div className="sidebar">
 			<div className="company">
 				<div className="logo-div">
-					<img src={logo} className="logo-sidebar" />
+					<img src={logo} className="logo-sidebar" alt="" />
 				</div>
 
 				<span className="navbar-brand mb-0 h1 m-1 company-name">
@@ -37,11 +37,11 @@ function Sidebar() {
 				</button>
 				{/* Individual View link */}
 				<button
-					className={`${isActive("/individual_view")} lists`}
-					onClick={() => navigate("/individual_view")}
+					className={`${isActive("/analysis_view")} lists`}
+					onClick={() => navigate("/analysis_view")}
 				>
 					<IoEyeOutline />
-					Individual View
+					Analysis View
 				</button>
 				{/* Performance link */}
 				<button

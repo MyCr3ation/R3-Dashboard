@@ -62,6 +62,7 @@ function CardTable({
 						<li className="page-item">
 							<a
 								className={`page-link ${currentPage === 1 ? "disabled" : ""}`}
+								href="/"
 								onClick={prePage}
 							>
 								&laquo;
@@ -69,7 +70,11 @@ function CardTable({
 						</li>
 						{numbers.map((n, i) => (
 							<li className={`page-item ${currentPage === n ? "active" : ""}`}>
-								<a className="page-link" onClick={() => changeCPage(n)}>
+								<a
+									className="page-link"
+									onClick={() => changeCPage(n)}
+									href="/"
+								>
 									{n}
 								</a>
 							</li>
@@ -80,6 +85,7 @@ function CardTable({
 									currentPage === npage ? "disabled" : ""
 								}`}
 								onClick={nextPage}
+								href="/"
 							>
 								&raquo;
 							</a>

@@ -5,7 +5,7 @@
 	border-bottom: 1px solid #3aad2b;
 	font-family: "AvenirMedium";
 	padding-left: 13rem;
-	z-index: 1;
+	z-index: 99;
 	height: 97px;
 }
 

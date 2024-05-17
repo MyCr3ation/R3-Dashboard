@@ -39,5 +39,5 @@
 
 .cardbody {
 	position: relative;
-	height: 330px;
+	min-height: 350px;
 }
